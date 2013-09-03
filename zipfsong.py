@@ -117,8 +117,8 @@ def zipfsong(n, m, song_freqs):
         # Boost each song based on position
         q = freq_actual * position
 
-        # The 'position' term is to properly handle ties during sorting
-        scored_song = (q, position, name)
+        # The '-position' term is to properly handle ties during sorting
+        scored_song = (q, -position, name)
 
         # Use a heap to keep at most the 'm' best items in memory
         if len(scored_songs) < m:
