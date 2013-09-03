@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+#
+# Solution by Wouter Bolsterlee <uws@xs4all.nl>, 2013
+#
+
 
 """
 Reversed Binary Numbers

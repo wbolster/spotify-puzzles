@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+#
+# Solution by Wouter Bolsterlee <uws@xs4all.nl>, 2013
+#
+
+
 """
 Zipf's song
 Problem ID: zipfsong
@@ -115,7 +120,7 @@ def zipfsong(n, m, song_freqs):
         # The 'position' term is to properly handle ties during sorting
         scored_song = (q, position, name)
 
-        # Use a heap to keep at most 'm' items in memory
+        # Use a heap to keep at most the 'm' best items in memory
         if len(scored_songs) < m:
             heapq.heappush(scored_songs, scored_song)
         else:
