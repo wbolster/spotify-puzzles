@@ -63,7 +63,7 @@ def test_reversebinary():
 
 def main():
     n = int(sys.stdin.readline().strip())
-    assert 1 < n < 1000000000
+    assert 1 <= n <= 1000000000
     print(reversebinary(n))
 
 
