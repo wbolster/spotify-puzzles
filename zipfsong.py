@@ -127,7 +127,13 @@ def zipfsong(n, m, song_freqs):
             heapq.heappushpop(scored_songs, scored_song)
 
     assert len(scored_songs) == m
-    return [name for q, position, name in reversed(scored_songs)]
+
+    # A heap is not a sorted list, but since m is small just sort it
+    # instead of repeatedly popping items using heappop().
+    scored_songs.sort(reverse=True)
+
+    # Return only the names
+    return [name for _, _, name in scored_songs]
 
 
 def test_zipfsong():
