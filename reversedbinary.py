@@ -47,6 +47,8 @@ import sys
 
 
 def reverse_binary(n):
+    # Simply (ab)use Python's bin() and int() built-ints to format a
+    # string, reverse it, and interpret it again! Batteries included! :)
     return int(bin(n)[-1:1:-1], 2)
 
 
