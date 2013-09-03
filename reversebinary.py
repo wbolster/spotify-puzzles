@@ -50,21 +50,21 @@ Sample output 2
 import sys
 
 
-def reverse_binary(n):
+def reversebinary(n):
     # Simply (ab)use Python's bin() and int() built-ints to format a
     # string, reverse it, and interpret it again! Batteries included! :)
     return int(bin(n)[-1:1:-1], 2)
 
 
-def test_reverse_binary():
-    assert reverse_binary(13) == 11
-    assert reverse_binary(47) == 61
+def test_reversebinary():
+    assert reversebinary(13) == 11
+    assert reversebinary(47) == 61
 
 
 def main():
     n = int(sys.stdin.readline().strip())
     assert 1 < n < 1000000000
-    print(reverse_binary(n))
+    print(reversebinary(n))
 
 
 if __name__ == '__main__':
